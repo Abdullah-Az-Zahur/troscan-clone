@@ -12,13 +12,10 @@ const AboutUs = () => {
   });
 
   return (
-    <div ref={ref} className="p-2 md:p-5 lg:p-10 ">
-      <h3 className="flex">
-        <Dot />
-        About us
-      </h3>
-      <div className="md:flex gap-5 md:gap-10 lg:gap-20 justify-between">
-        <div className="flex flex-col justify-between">
+    <div ref={ref} className="p-2 md:p-5 lg:p-10 mt-20">
+      <h3>• About us</h3>
+      <div className="md:flex gap-10 md:gap-10 lg:gap-20 justify-between">
+        <div className="flex flex-col justify-between md:w-1/3">
           <div>
             <p className="lg:text-6xl my-10">
               Where Spaces inspire, and Design Comes Alive
@@ -32,15 +29,15 @@ const AboutUs = () => {
             <p>
               Our expert team blends timeless craftsmanship with innovative
               designs, ensuring each piece and layout reflects your unique taste
-              and lifestyle. Whether you're looking to reimagine your living
-              room.
+              and lifestyle. Whether you&apos;re looking to reimagine your
+              living room.
             </p>
             <ButtonSecondary>More About us</ButtonSecondary>
           </div>
         </div>
 
         {/* Image zoom effect */}
-        <div className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden rounded-lg mt-5 md:mt-0 md:w-1/2">
           <motion.div
             animate={{ scale: isInView ? 1.1 : 1 }} // zoom in/out
             transition={{ duration: 0.8, ease: "easeInOut" }}

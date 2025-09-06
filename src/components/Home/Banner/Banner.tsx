@@ -15,7 +15,7 @@ const Banner = () => {
   return (
     <div
       ref={ref}
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden p-5"
     >
       {/* Background Image */}
       <motion.div
@@ -39,9 +39,9 @@ const Banner = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold"
+          className="text-4xl md:text-6xl font-bold w-1/2 mx-auto"
         >
-          Timeless Comfort & <br /> Endless Luxury
+          Timeless Comfort & Endless Luxury
         </motion.h1>
 
         {/* Buttons */}
