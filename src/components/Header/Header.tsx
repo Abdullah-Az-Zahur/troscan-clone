@@ -20,7 +20,7 @@ const Header = () => {
         className="fixed top-5 left-1/2 -translate-x-1/2 w-11/12 md:w-2/3 lg:w-1/2 bg-background z-50 rounded-xl shadow-md overflow-hidden"
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <div className="flex items-center justify-between p-4 md:p-1">
+        <div className="flex items-center justify-between p-1 md:p-1">
           <h1 className="text-xl md:text-2xl font-bold pl-4">Troscan</h1>
 
           {/* Desktop */}
@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* Mobile */}
           <button
-            className="md:hidden"
+            className="md:hidden bg-foreground text-background p-2 rounded-lg"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}

@@ -1,9 +1,12 @@
+import AboutUs from "@/components/Home/AboutUs/AboutUs";
+import Banner from "@/components/Home/Banner/Banner";
 
 
 export default function Home() {
   return (
-    <main className="mt-24">
-      <h3>main</h3>
+    <main className="">
+      <Banner />
+      <AboutUs/>
     </main>
   );
 }
