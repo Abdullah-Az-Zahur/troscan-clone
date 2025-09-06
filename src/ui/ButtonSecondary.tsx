@@ -6,17 +6,16 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
 }
-
-const ButtonPrimary = ({ children }: Props) => {
+const ButtonSecondary = ({ children }: Props) => {
   return (
     <motion.button
       // whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="px-6 py-3 w-full md:w-auto rounded-lg bg-background text-foreground font-semibold shadow-lg hover:bg-[#E4CBB7] transition"
+      className="px-6 py-3 w-full md:w-auto rounded-lg bg-foreground text-background font-semibold shadow-lg hover:bg-[#B75842] transition"
     >
       {children}
     </motion.button>
   );
 };
 
-export default ButtonPrimary;
+export default ButtonSecondary ;
