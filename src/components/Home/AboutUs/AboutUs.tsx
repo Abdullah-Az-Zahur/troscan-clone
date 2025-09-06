@@ -1,6 +1,5 @@
 "use client";
 import ButtonSecondary from "@/ui/ButtonSecondary";
-import { Dot } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -32,7 +31,9 @@ const AboutUs = () => {
               and lifestyle. Whether you&apos;re looking to reimagine your
               living room.
             </p>
-            <ButtonSecondary>More About us</ButtonSecondary>
+            <div className="md:w-1/2">
+              <ButtonSecondary href="#">More About us</ButtonSecondary>
+            </div>
           </div>
         </div>
 

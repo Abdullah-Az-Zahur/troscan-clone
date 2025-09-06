@@ -51,7 +51,7 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            <ButtonPrimary> Our Vision </ButtonPrimary>
+            <ButtonPrimary href="#"> Our Vision </ButtonPrimary>
           </motion.div>
 
           <motion.div
