@@ -1,11 +1,60 @@
-import React from 'react';
+import ButtonSecondary from "@/ui/ButtonSecondary";
+import React from "react";
+import NewsCard from "./NewsCard/NewsCard";
+
 
 const News = () => {
-    return (
-        <div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ullam dignissimos quos molestiae, numquam, repudiandae ea voluptatum quae accusamus similique, expedita velit cumque! Dolorum reiciendis ad, tenetur quasi maxime dignissimos voluptates natus debitis repellendus quas deserunt voluptate vel? Et, accusantium ipsum aperiam possimus illum vero, mollitia consectetur autem harum consequuntur iure quos, voluptates ea quia. Harum autem aperiam repellendus quos facilis impedit vitae quam porro ex iure sint mollitia, officia dignissimos ducimus ea maxime facere ullam. Tenetur illum non aut aliquam neque, nihil molestiae! Recusandae error impedit architecto reiciendis placeat, delectus id sit doloremque porro fuga cumque odio commodi, incidunt ratione in ullam eius officiis tenetur rem odit, nobis illum consequatur iusto quidem. Placeat quia, soluta et laboriosam atque quam amet, sit dolores molestias consectetur dolore, perspiciatis nesciunt molestiae. Earum debitis laudantium est, fugiat sunt, nesciunt voluptas quasi tenetur, et suscipit reprehenderit iusto voluptates. Soluta, debitis incidunt? Quisquam repudiandae doloribus repellat doloremque illo perferendis quos beatae dicta. Obcaecati inventore esse doloremque illum adipisci magni modi recusandae nesciunt maxime? Consequuntur repellat et culpa esse optio provident saepe, unde magnam cupiditate, eaque quisquam. A debitis ex tenetur quod, sit tempore eligendi suscipit, possimus, autem inventore unde similique aperiam beatae facilis exercitationem numquam.</p>
+  const news = [
+    {
+      imageUrl:
+        "https://framerusercontent.com/images/bZdh0mETTRfnrDNMinaVWCZqhqs.jpeg",
+      date: "February 5, 2022",
+      title: "The Art of Minimalist Interiors",
+      subtitle: "Less is More: Designing Spaces That Speak Simplicity",
+    },
+    {
+      imageUrl:
+        "https://framerusercontent.com/images/HXD1LGGH4sdyu2AfKcILOBWjBM.jpeg",
+      date: "February 22, 2022",
+      title: "Timeless Furniture Pieces Every Home Needs",
+      subtitle: "Building a Home That Never Goes Out of Style",
+    },
+    {
+      imageUrl:
+        "https://framerusercontent.com/images/xzFrK8RnnKFFvFnsttyDo4BcCE.jpeg",
+      date: "January 21, 2023",
+      title: "Psychology in Interior Design",
+      subtitle: "Shaping Emotions Through Thoughtful Color Choices",
+    },
+  ];
+
+  return (
+    <div className="p-2 md:p-5 lg:p-10 mt-20">
+      {/* Header */}
+      <div className="md:flex md:my-10 items-end justify-between">
+        <div className="flex-1">
+          <h3>• About us</h3>
+          <p className="text-4xl md:text-4xl lg:text-6xl my-5 md:w-1/2">
+            Stay Inspired with Interior Trends
+          </p>
         </div>
-    );
+        <div className="mt-4 md:mt-0 mb-5 md:mb-0">
+          <ButtonSecondary>View All News</ButtonSecondary>
+        </div>
+      </div>
+
+      {/* News Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {news.map((item, index) => (
+          <NewsCard
+            key={index}
+            {...item}
+            className={index === 2 ? "md:hidden lg:block" : ""}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default News;
