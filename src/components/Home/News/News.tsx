@@ -1,9 +1,25 @@
-import ButtonSecondary from "@/ui/ButtonSecondary";
-import React from "react";
-import NewsCard from "./NewsCard/NewsCard";
+"use client";
 
+import ButtonSecondary from "@/ui/ButtonSecondary";
+import React, { useRef, useEffect, useState } from "react";
+import NewsCard from "./NewsCard/NewsCard";
+import { motion, useInView, Easing, Variants } from "framer-motion";
 
 const News = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, {
+    margin: "-30% 0px -30% 0px",
+  });
+
+  // Track if animation has already run
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
+
   const news = [
     {
       imageUrl:
@@ -28,31 +44,86 @@ const News = () => {
     },
   ];
 
+  // Define easing function
+  const ease: Easing = [0.42, 0, 0.58, 1];
+
+  // Animation variants
+  const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.7, 
+        ease 
+      } 
+    },
+  };
+
+  const buttonVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.8, 
+        ease 
+      } 
+    },
+  };
+
   return (
-    <div className="p-2 md:p-5 lg:p-10 mt-20">
+    <div ref={ref} className="p-2 md:p-5 lg:p-10 mt-20">
       {/* Header */}
-      <div className="md:flex md:my-10 items-end justify-between">
-        <div className="flex-1">
-          <h3>• About us</h3>
-          <p className="text-4xl md:text-4xl lg:text-6xl my-5 md:w-1/2">
+      <motion.div 
+        className="md:flex md:my-10 items-end justify-between"
+        initial="hidden"
+        animate={hasAnimated ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+        <motion.div className="flex-1" variants={itemVariants}>
+          <h3>• News</h3>
+          <motion.p 
+            className="text-4xl md:text-4xl lg:text-6xl my-5 md:w-1/2"
+            variants={itemVariants}
+          >
             Stay Inspired with Interior Trends
-          </p>
-        </div>
-        <div className="mt-4 md:mt-0 mb-5 md:mb-0">
+          </motion.p>
+        </motion.div>
+        <motion.div 
+          className="mt-4 md:mt-0 mb-5 md:mb-0"
+          variants={buttonVariants}
+        >
           <ButtonSecondary>View All News</ButtonSecondary>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* News Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        initial="hidden"
+        animate={hasAnimated ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
         {news.map((item, index) => (
-          <NewsCard
+          <motion.div
             key={index}
-            {...item}
+            variants={itemVariants}
             className={index === 2 ? "md:hidden lg:block" : ""}
-          />
+          >
+            <NewsCard {...item} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

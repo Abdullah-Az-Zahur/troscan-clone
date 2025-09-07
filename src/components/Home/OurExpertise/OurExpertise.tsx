@@ -43,7 +43,7 @@ const services = [
   },
 ];
 
-// Define easing function
+// Define easing functions
 const ease: Easing = [0.42, 0, 0.58, 1];
 const easeInOut: Easing = "easeInOut";
 
