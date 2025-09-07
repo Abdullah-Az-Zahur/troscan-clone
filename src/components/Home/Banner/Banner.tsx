@@ -39,7 +39,7 @@ const Banner = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold w-1/2 mx-auto"
+          className="text-4xl md:text-6xl lg:text-8xl w-1/2 mx-auto"
         >
           Timeless Comfort & Endless Luxury
         </motion.h1>
