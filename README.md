@@ -46,8 +46,7 @@ troscan-clone/
 ├── tailwind.config.js
 └── README.md
 
-yaml
-Copy code
+
 
 ---
 
@@ -60,15 +59,12 @@ git clone https://github.com/Abdullah-Az-Zahur/troscan-clone.git
 cd troscan-clone
 Install dependencies:
 
-bash
-Copy code
+
 npm install
 # or
 yarn install
 Run the development server:
 
-bash
-Copy code
 npm run dev
 # or
 yarn dev
@@ -87,11 +83,3 @@ Task provided by Ena Ema Technologies
 📄 License
 This project is a skill assessment task for assessment purposes only and not intended for commercial use.
 
-yaml
-Copy code
-
----
-
-If you want, I can also make a **shorter, super recruiter-friendly version** that looks very clean on GitHub and highlights your skills immediately. This one is a bit detailed.  
-
-Do you want me to do that version too?
