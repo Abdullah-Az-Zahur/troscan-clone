@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Troscan Landing Page Clone
 
-## Getting Started
+This project is a **pixel-perfect clone** of the [Troscan Framer website](https://troscan.framer.website/), built as a skill assessment task for the **Frontend Developer** position at Ena Ema Technologies.  
 
-First, run the development server:
+The landing page is fully **responsive**, includes **scroll-based animations**, and interactive **hover effects**.  
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js  
+- **Styling:** Tailwind CSS  
+- **Animations:** Framer Motion / CSS Transitions  
+- **Hosting:** Vercel  
+
+---
+
+## 📌 Features
+
+- Exact visual replication of the Troscan website  
+- Fully responsive layout (desktop, tablet, mobile)  
+- Smooth scroll-based animations and transitions  
+- Interactive hover effects on buttons and elements  
+- Clean, reusable, and modular code structure  
+
+---
+
+## 🚀 Live Demo
+
+[View Live Project](https://troscan-clone-theta.vercel.app/)  
+
+---
+
+## 📂 Project Structure
+
+troscan-clone/
+│
+├── public/ # Static assets (images, icons)
+├── src/
+│ ├── components/ # Reusable components
+│ ├── pages/ # Next.js pages
+│ ├── styles/ # Global and component-specific styles
+│ └── animations/ # Framer Motion animation configs
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## 💻 How to Run Locally
+
+1. **Clone the repository:**
 
 ```bash
+git clone https://github.com/Abdullah-Az-Zahur/troscan-clone.git
+cd troscan-clone
+Install dependencies:
+
+bash
+Copy code
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
+Copy code
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📌 Deployment
+The project is deployed on Vercel and is publicly accessible:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+https://troscan-clone-theta.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⚡ Acknowledgements
+Design inspiration from Framer
 
-## Learn More
+Task provided by Ena Ema Technologies
 
-To learn more about Next.js, take a look at the following resources:
+📄 License
+This project is a skill assessment task for assessment purposes only and not intended for commercial use.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yaml
+Copy code
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+If you want, I can also make a **shorter, super recruiter-friendly version** that looks very clean on GitHub and highlights your skills immediately. This one is a bit detailed.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Do you want me to do that version too?
