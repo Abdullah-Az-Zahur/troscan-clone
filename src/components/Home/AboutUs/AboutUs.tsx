@@ -13,13 +13,12 @@ const AboutUs = () => {
   return (
     <div ref={ref} className="p-2 md:p-5 lg:p-10 mt-20">
       <h3>• About us</h3>
-      <div className="md:flex gap-10 md:gap-10 lg:gap-20 justify-between">
-        <div className="flex flex-col justify-between md:w-1/3">
-          <div>
-            <p className="lg:text-6xl my-10">
-              Where Spaces inspire, and Design Comes Alive
-            </p>
-          </div>
+      <div className="lg:flex gap-10 md:gap-10 lg:gap-20 justify-between">
+        <div className="flex flex-col justify-between lg:w-1/3">
+          <p className="text-4xl md:text-4xl lg:text-6xl my-5">
+            Where Spaces inspire, and Design Comes Alive
+          </p>
+
           <div className="space-y-5">
             <p>
               At Troscán, we believe that every space has a story to tell. As a
@@ -31,14 +30,14 @@ const AboutUs = () => {
               and lifestyle. Whether you&apos;re looking to reimagine your
               living room.
             </p>
-            <div className="md:w-1/2">
+            <div className="w-1/2 md:w-1/3">
               <ButtonSecondary href="#">More About us</ButtonSecondary>
             </div>
           </div>
         </div>
 
         {/* Image zoom effect */}
-        <div className="overflow-hidden rounded-lg mt-5 md:mt-0 md:w-1/2">
+        <div className="overflow-hidden rounded-lg mt-5 lg:mt-0 md:w-1/2">
           <motion.div
             animate={{ scale: isInView ? 1.1 : 1 }} // zoom in/out
             transition={{ duration: 0.8, ease: "easeInOut" }}
