@@ -84,16 +84,16 @@ const OurExpertise = () => {
   return (
     <div className="p-2 md:p-5 lg:p-10 mt-20 md:mt-52">
       <div>
-        <div className="md:w-1/2 md:ml-auto mb-10">
+        <div className="lg:w-1/2 lg:ml-auto mb-10">
           <h2 className="text-lg font-semibold">• Our Expertise</h2>
-          <p className="text-4xl md:text-4xl lg:text-6xl md:w-2/3 my-5 leading-snug">
+          <p className="text-4xl md:text-5xl lg:text-6xl md:w-2/3 my-5 leading-snug">
             Where Spaces Inspire, and Design Comes Alive
           </p>
         </div>
 
-        <div className="md:flex gap-8">
+        <div className="lg:flex gap-8">
           {/* Left side image */}
-          <div className="md:flex-1 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden">
+          <div className="hidden lg:block lg:flex-1 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden">
             <motion.div
               key={activeService?.id}
               initial={{ y: 200 * direction, opacity: 1 }}
