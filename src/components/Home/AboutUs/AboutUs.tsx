@@ -35,10 +35,6 @@ const AboutUs = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease } },
   };
 
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease } },
-  };
 
   return (
     <div ref={ref} className="p-2 md:p-5 lg:p-10 mt-20">
@@ -48,7 +44,7 @@ const AboutUs = () => {
         <motion.div
           className="flex flex-col justify-between lg:w-1/3"
           initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"} // Animate only once
+          animate={hasAnimated ? "visible" : "hidden"}
           variants={containerVariants}
         >
           <motion.p
@@ -69,9 +65,9 @@ const AboutUs = () => {
               and lifestyle. Whether you&apos;re looking to reimagine your
               living room.
             </motion.p>
-            <motion.div className="w-1/2 md:w-1/3" variants={buttonVariants}>
+            <div className="w-1/2 md:w-1/3" >
               <ButtonSecondary href="#">More About us</ButtonSecondary>
-            </motion.div>
+            </div>
           </motion.div>
         </motion.div>
 

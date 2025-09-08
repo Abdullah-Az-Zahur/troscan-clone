@@ -6,26 +6,31 @@ import Link from "next/link";
 
 interface Props {
   children: ReactNode;
-  href?: string; // Make href optional
-  onClick?: () => void; // Add optional onClick for button behavior
+  href?: string; 
+  onClick?: () => void; 
 }
 
 const ButtonPrimary = ({ children, href, onClick }: Props) => {
-  // If href is provided, use Link. Otherwise, use a regular button
+  
   if (href) {
     return (
-      <Link href={href} className="block text-center">
-        <motion.div
-          whileTap={{ scale: 0.95 }}
-          className="px-6 py-3 w-full md:w-auto rounded-lg bg-background text-foreground font-semibold shadow-lg hover:bg-[#E4CBB7] transition cursor-pointer"
-        >
-          {children}
-        </motion.div>
-      </Link>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <Link href={href} className="block text-center">
+          <motion.div
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 w-full md:w-auto rounded-lg bg-background text-foreground font-semibold shadow-lg hover:bg-[#E4CBB7] transition cursor-pointer"
+          >
+            {children}
+          </motion.div>
+        </Link>
+      </motion.div>
     );
   }
 
-  // If no href but has onClick, use button with onClick
   return (
     <motion.button
       whileTap={{ scale: 0.95 }}
