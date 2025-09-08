@@ -68,7 +68,7 @@ const Header = () => {
                 </Link>
               ))}
               <Link
-                className="text-lg font-medium hover:text-blue-500 transition-colors"
+                className="text-lg font-medium hover:text-blue-500 transition-colors bg-foreground text-background rounded-lg px-5 py-3"
                 href={"#"}
                 onClick={() => setMobileOpen(false)}
               >
