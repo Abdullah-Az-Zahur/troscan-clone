@@ -67,12 +67,12 @@ const TransformingSpaces = () => {
       ];
 
       const initialOffsets = [
-        { x: 0, y: 0 },
-        { x: 0, y: 0 },
-        { x: 0, y: 0 },
-        { x: 0, y: 0 },
-        { x: 0, y: 0 },
-        { x: 0, y: 0 },
+        { x: -50, y: -50 },
+        { x: 10, y: -40 },
+        { x: 70, y: -40 },
+        { x: -70, y: 40 },
+        { x: 0, y: 70 },
+        { x: 70, y: 50 },
       ];
 
       return { initialOffsets, finalOffsets };
@@ -84,12 +84,12 @@ const TransformingSpaces = () => {
       const spreadFactor = isSmallScreen ? 0.25 : isMediumScreen ? 0.3 : 0.35;
 
       const initialOffsets = [
-        { x: -40, y: -20 },
-        { x: 10, y: -50 },
-        { x: 60, y: -10 },
-        { x: -50, y: 40 },
+        { x: -100, y: -50 },
+        { x: 10, y: -40 },
+        { x: 120, y: -120 },
+        { x: -150, y: 40 },
         { x: 0, y: 70 },
-        { x: 50, y: 50 },
+        { x: 80, y: 80 },
       ];
 
       const horizontalPadding = isSmallScreen ? 16 : isMediumScreen ? 40 : 80;
